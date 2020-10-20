@@ -1,0 +1,158 @@
+Second year mathematics 2020
+A and B
+Stream
+Classwork
+People
+Second year mathematics 2020
+A and B
+Upcoming
+Woohoo, no work due soon!
+View all
+
+Share something with your class…
+
+Announcement: "Math Class 8: How to use Code block and…"
+Goutam Saha
+Created 4:00 PM4:00 PM
+Math Class 8: How to use Code block and how to use I/O Files in Fortran?
+
+Math Class 8
+YouTube video   ‪1 hour 2 minutes‬
+
+
+Announcement: "Dear All, Our online class schedule…"
+Goutam Saha
+Created Jul 10Jul 10 (Edited 2:17 PM)
+Dear All, Our online class schedule will be Every Monday at 2.15 pm. Class will start from 13 July. Class duration will be max 1.15 hour. Please join the meeting with the following informations.
+Meeting ID: 978 6588 5722
+Password: 8L3rFU
+We will use this link and info for our every session. Please do not share this info with outsiders. Thank you.
+
+Launch Meeting - Zoom
+https://bdren.zoom.us/j/97865885722?pwd=RnBVY2JYWTNtRUJLSUxvSW1qVmRwZz09
+
+
+Announcement: "Please Submit your proposed group name…"
+Goutam Saha
+Created Sep 6Sep 6 (Edited Sep 6)
+Please Submit your proposed group name and members list in the comment box.  Each group should have 5 members. Only 1 group is allowed to form a group with less than 5 members.
+
+
+Announcement: "Dear all, Create a group of 5 people…"
+Goutam Saha
+Created Sep 6Sep 6
+Dear all, Create a group of 5 people and each of them will solve 6 problems. Please send me your group list with your given group name. Your coding problems is given in Test Programs file.  Thanks
+
+Assignment 3: The last date of submission is 30 September 2020.
+https://forms.gle/DJLvxN6RKUdTfZk36
+
+Test Programs.txt
+Text
+
+Sumon Ahmed6:28 AM
+All of this problem is very interesting. 
+Thank you, sir. 
+To create, such an opportunity to solve like this problem.
+
+
+Post by Sukanto Ray
+Sukanto Ray
+Created Sep 6Sep 6
+অধ্যায়-৪
+https://drive.google.com/file/d/1kZzZE8TY0rZDX2E5UAqXNxtYo0DTWx1b/view?usp=sharing
+https://rextester.com/edit/COWFS95366
+1 class comment
+
+Goutam SahaSep 6
+Good
+
+
+Post by Sukanto Ray
+Sukanto Ray
+Created Sep 5Sep 5
+অধ্যায়-২
+https://docs.google.com/document/d/1ggq823FVdOVY0Xvi05O6SecTOVnDNgIXupdKpYEwom8/edit?usp=drivesdk
+
+
+Post by Sukanto Ray
+Sukanto Ray
+Created Sep 5Sep 5
+অধ্যায়-৩
+https://drive.google.com/file/d/1XNdJK7uCjI89R6OjNBf0HRuEcEdtEM8-/view?usp=drivesdk
+https://rextester.com/CPHE62371
+1 class comment
+
+Goutam SahaSep 6
+good
+
+
+Post by Sukanto Ray
+Sukanto Ray
+Created Sep 5Sep 5
+অধ্যায়-৫
+https://drive.google.com/file/d/14zU4giWZOdHHUy7Hg0TeIA3UcMlY5XJI/view?usp=drivesdk
+https://rextester.com/LAU66859
+1 class comment
+
+Goutam SahaSep 6
+good
+
+
+Post by Sukanto Ray
+Sukanto Ray
+Created Sep 5Sep 5
+অধ্যায়-৬
+https://drive.google.com/file/d/1vNZmJuQHpvhPlOoVI2fu7bsVg8OvECp7/view?usp=drivesdk
+https://rextester.com/IVCE67526
+1 class comment
+
+Goutam SahaSep 6
+good
+
+
+Announcement: "Math Class 7"
+Goutam Saha
+Created Aug 31Aug 31
+Math Class 7
+
+Math Class 7
+YouTube video   ‪1 hour 13 minutes‬
+
+Goutam SahaSep 6
++shamimahmed234du@gmail.com Well  done.
+
+
+Your assignment: You must use Function or SUbroutine subprograms, and Format in fortrans.
+ 
+1.	If N is a positive integer, then test whether N is prime or not.
+2.	Genrate list of first N prime numbers.
+3.	Generate list of first N Fibonacci numbers.
+4.	Find the GCD and LCM of 2 positive numbers.
+5.	Calculate your age.
+6.	Print your name in reverse order.
+7.	Input a 4 digit positive number and print it in reverse order.
+8.	If N is a positive integer, then test whether N is even or odd.
+9.	Find the mean, median and statndard deviation of N integers.
+10.  	Find the largest, second largest, smallest and second smallest numbers from N integers.
+11.	Find factorial of a positive integer.
+12. 	Genrate Pascal triangle.
+13. 	Find the day of a year.
+14.	Check whether a year is leap-year or not.
+15.	Generate your 1st year grade sheet.
+16.	Find square root of a positive integer using Newton raphson method.
+17. 	Input a positive integer n and prints the sum of the odd numbers between 1 to n.
+18.	Input two positive integers and test whether they are coprime or not.
+19.	Find the perfect numbers between 1 to 1000.
+20. 	Find Highest common factor (HCF) of 2 positive integers.
+21.	Convert a binary number into a decimal number.
+22. 	Consider an array of N integers. Separate Even and Odd numbers.
+23.	Consider an array of N integers. Separate prime numbers. 
+24.	Consider an array of N integers. Sort elements of an array in ascending/descending order.
+25.	Find the product of two 3x3 square matrices.
+26.	Input a 3x3 square matrix. Find the sum of diagonal elements of the matrix.
+27.	Input a 3x3 square matrix. Find the sum of the elements above the main diagonal of the matrix.
+28.	Input a 3x3 square matrix. Find the sum of the elements below the main diagonal of the matrix.
+29.	Find the determinants of a 3x3 square matrix.
+30.	Find the inverse of a 3x3 square matrix. 
+Test Programs.txt
+Displaying Test Programs.txt.
