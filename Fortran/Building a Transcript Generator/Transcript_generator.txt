@@ -1,0 +1,168 @@
+https://rextester.com/NSGJTZ50921
+
+PROGRAM TRANSCRIPT_GENERATOR
+IMPLICIT NONE
+
+!THIS IS A PROGRAM TO CREATE MARKSHEET FOR ANY STUDENT PROVIDED HIS DETAILS
+!JUST PUT ALL THE INPUT VALUES AS STATED:
+
+! NAME (STRING)
+! HALL (STRING)
+! REGISTRATION NUMBER (STRING)
+! SESSION (STRING)
+! ROLL (INTEGER)
+
+! NUMBER_OF_SUBJECTS_N (INTEGER)
+! 1ST_COURSE_NO(STRING) COURSE_NAME(STRING) CREDITS(INTEGER) MARKS(REAL) TOTAL_MARKS_ON_THAT_COURSE(REAL)
+! 2ND_COURSE_NO(STRING) COURSE_NAME(STRING) CREDITS(INTEGER) MARKS(REAL) TOTAL_MARKS_ON_THAT_COURSE(REAL)
+! .
+! .
+! .
+! NTH_COURSE_NO(STRING) COURSE_NAME(STRING) CREDITS(INTEGER) MARKS(REAL) TOTAL_MARKS_ON_THAT_COURSE(REAL)
+
+!THIS WILL GENERATE A TRANSCRIPT BASED ON THE GIVEN INFO 
+
+CHARACTER(33):: NAME,HALL,REG,SESSION
+INTEGER:: ROLL, SUB_COUNT
+CHARACTER(50):: COURSE_NO,COURSE_TITLE
+INTEGER::CREDITS,N,FAILED_CREDITS_COUNTER
+
+CHARACTER(2)::GRADE
+REAL:: MARKS,TOT_MARKS,GRADE_POINT, CG_COUNTER, CREDIT_COUNTER, WA_COUNTER
+
+WRITE(*,11) 'University of Dhaka'
+WRITE(*,12) 'Grade Certificate/Academic Transcript'
+WRITE(*,13) 'First Year B.S. Honours Examination 2019'  !the top most writtings
+WRITE(*,14) 'Subject: Mathematics' 
+
+11 FORMAT(50X,50A)
+12 FORMAT(40X,50A)
+13 FORMAT(38X,50A) !positioning the topmost writtings
+14 FORMAT(49X,50A)
+
+READ(*,*)NAME
+READ(*,*)HALL
+READ(*,*)REG      !reading student info
+READ(*,*)SESSION
+READ(*,*)ROLL
+
+WRITE(*,*) ' '
+WRITE(*,*) ' '
+WRITE(*,*) 'The following grades are obtained by ',NAME
+WRITE(*,*) ' '
+WRITE(*,*) 'Hall: ',HALL
+WRITE(*,*) ' '
+WRITE(*,*) 'Registration No. ',REG, 'Session: ', SESSION, 'Exam. Roll No. ',ROLL   !showing student info
+WRITE(*,*) ' '
+WRITE(*,*) 'at the First Year B.S Honours Examination 2019 held in November 2019'
+
+WRITE(*,*) ' '
+WRITE(*,*) ' '
+WRITE(*,16),'COURSE_NO','COURSE_TITLE','CREDITS','GRADE','GRADE_POINT'
+16 FORMAT(A10,2X,A15,30X,A10,10X,A10,20X,A15,2X)
+PRINT*,'---------|----------------------------------------|-----------------------|-----------------------|----------------------'
+
+READ(*,*)N
+CG_COUNTER=0
+WA_COUNTER=0
+CREDIT_COUNTER=0
+FAILED_CREDITS_COUNTER=0
+
+DO SUB_COUNT=1,N  
+READ(*,*)COURSE_NO,COURSE_TITLE,CREDITS,MARKS,TOT_MARKS  !reading each of the subject details
+
+CALL GRADE_GEN(MARKS,TOT_MARKS,GRADE,GRADE_POINT,COURSE_NO, COURSE_TITLE)   !calling GRADE_GEN subroutine to determine each subjects
+                                                                            !Grade and Grade points
+
+WRITE(*,15),COURSE_NO,COURSE_TITLE,CREDITS,GRADE,GRADE_POINT    !printing each subjects wanted output values
+15 FORMAT(1X,A10,2X,A30,20X,I2,20X,A2,20X,F10.2)
+PRINT*,'---------|----------------------------------------|-----------------------|-----------------------|----------------------' ! seperating each line with borders
+
+CG_COUNTER=CG_COUNTER+GRADE_POINT*REAL(CREDITS)
+WA_COUNTER=WA_COUNTER+MARKS*CREDITS              ! calculating gpa and weighted average
+CREDIT_COUNTER=CREDIT_COUNTER+CREDITS
+
+IF (GRADE_POINT<2.00) THEN
+FAILED_CREDITS_COUNTER=FAILED_CREDITS_COUNTER+CREDITS  ! calculating the failed credits
+END IF
+
+END DO
+
+CG_COUNTER=CG_COUNTER/CREDIT_COUNTER
+WA_COUNTER=WA_COUNTER/CREDIT_COUNTER
+PRINT*,'--------------------------------------------------|-----------------------------------------------|----------------------'
+
+WRITE(*,17)'Weighted average(in percentage)',WA_COUNTER    ! printing gpa and weighted average
+17 FORMAT(1X,A87,20X,F10.3)
+PRINT*,'--------------------------------------------------|-----------------------------------------------|----------------------'
+WRITE(*,18)'1st Year Grade Point Avarage(GPA)',CG_COUNTER
+18 FORMAT(1X,A87,20X,F10.3)
+PRINT*,'--------------------------------------------------|-----------------------------------------------|----------------------'
+
+IF (FAILED_CREDITS_COUNTER<8) THEN   ! printing the result based on failed credits
+WRITE(*,19)'Result: Promoted'
+19 FORMAT(1X,A117)
+ELSE
+WRITE(*,20) 'Result: Failed'
+20 FORMAT(1X,A117)
+END IF
+
+STOP
+END PROGRAM TRANSCRIPT_GENERATOR !----------------------------------------------------------------------------------
+
+
+
+
+! A SUBROUTINE FOR GENERATING GRADES AND GRADE POINT OUT OF MARKS
+SUBROUTINE GRADE_GEN(MARKS,TOT_MARKS,GRADE,GRADE_POINT,COURSE_NO,COURSE_TITLE)
+IMPLICIT NONE
+REAL:: MARKS,TOT_MARKS
+CHARACTER(2)::GRADE
+CHARACTER(50):: COURSE_NO, COURSE_TITLE
+REAL::GRADE_POINT
+
+MARKS=(MARKS/TOT_MARKS)*100
+
+IF (MARKS>=0 .AND. MARKS<=100) THEN
+
+IF (MARKS>=80) THEN
+GRADE='A+'
+GRADE_POINT=4.00
+ELSE IF(MARKS>=75) THEN
+GRADE='A'
+GRADE_POINT=3.75
+ELSE IF(MARKS>=70) THEN
+GRADE='A-'
+GRADE_POINT=3.5
+ELSE IF(MARKS>=65) THEN
+GRADE='B+'
+GRADE_POINT=3.25
+ELSE IF(MARKS>=60) THEN
+GRADE='B'
+GRADE_POINT=3.00
+ELSE IF(MARKS>=55) THEN
+GRADE='B-'
+GRADE_POINT=2.75
+ELSE IF(MARKS>=50) THEN
+GRADE='C+'
+GRADE_POINT=2.50
+ELSE IF(MARKS>=45) THEN
+GRADE='C'
+GRADE_POINT=2.25
+ELSE IF(MARKS>=40) THEN
+GRADE='D'
+GRADE_POINT=2.00
+ELSE IF(MARKS<40) THEN
+GRADE='F'
+GRADE_POINT=0.00
+ELSE
+PRINT*,' '
+PRINT*,'INVALID INPUT FOR MARKS IN  ', TRIM(COURSE_NO),' ',TRIM(COURSE_TITLE)
+END IF
+
+ELSE
+PRINT*,' '
+PRINT*,'INVALID INPUT FOR MARKS IN  ', TRIM(COURSE_NO),' ',TRIM(COURSE_TITLE)
+END IF
+
+END SUBROUTINE GRADE_GEN
